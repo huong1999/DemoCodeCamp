@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style>
@@ -17,25 +18,23 @@
     width: 100%;
     z-index: 9999 !important;
   }
-  .navbar {
-    margin-bottom: 0px;
-  }
 
   .affix ~ .container-fluid {
    position: relative;
    top: 50px;
   }
-  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
-  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+  #section1 {padding-top:1000px;height:500px;background-color: antiquewhite;}
+  #section2 {padding-top:1000px;height:500px;color: #fff; background-color: #673ab7;}
   #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
-  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section4 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
   #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
   </style>
-</head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	</head>
 
-<div class="container-fluid" style="background-color:antiquewhite;color:#fff;height:150px;">
-  <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+<body data-spy="scroll" data-target=".navbar" data-offset="50"  style="background-color: currentColor">
+<!--Menu-->
+<div class="container-fluid" style="color:#fff;height:90px;">
+  <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="197">
   <div class="container-fluid">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -46,50 +45,168 @@
       
     </div>
     <div>
+
       <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-		<li><img src="LovePets.png"></li>
-		<li><a><h4>MyPets</h4></a></li>
-          <li><a href="index.html" style="margin-left: 600px; width: 200px"><h4>Trang chủ</h4></a></li>
+		  <img src="img/LovePets.png" class="nav navbar-nav navbar-left">
+		  <h4 class="nav navbar-nav navbar-left" style="margin-top: 30px; margin-left: 10px">MyPets</h4>
+        <ul class="nav navbar-nav navbar-right" >
+          <li><a href="index.html" style="width: 150px"><h4>Trang chủ</h4></a></li>
           
-          <li class="dropdown" style="width: 150px"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><h4>Chó<span class="caret"></h3></span></a>
-            <ul class="dropdown-menu">
+          <li class="dropdown" style=" width: 150px"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="text-align: center"><h4>Chó<span class="caret"></h4></span></a>
+            <ul class="dropdown-menu" style="background-color: antiquewhite">
               <li><a href="Dogs1.html">Chăm sóc chó</a></li>
-              <li><a href="Dogs2">Thức ăn cho chó</a></li>
+              <li><a href="Dogs2.html">Thức ăn cho chó</a></li>
             </ul>
           </li>
-		<li class="dropdown" style="width: 150px"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><h4>Mèo<span class="caret"></h3></span>
-            <ul class="dropdown-menu">
+		<li class="dropdown" style=" width: 150px"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><h4>Mèo<span class="caret"></h4></span>
+            <ul class="dropdown-menu" style="background-color: antiquewhite">
               <li><a href="Cat1.html">Chăm sóc mèo</a></li>
               <li><a href="Cat2.html">Thức ăn cho mèo</a></li>
             </ul>
           </li>
-		<li><a href="#section4"><h4>Cấp cứu</h3></li>
+		<li><a href="#section4" style="width: 150px"><h4>Cấp cứu</h4></li>
         </ul>
       </div>
     </div>
   </div>
 </nav>    
-
-
 </div>
 
 
-<div id="section1" class="container-fluid">
-  
-</div>
-<div id="section2" class="container-fluid">
-  
-</div>
-<div id="section3" class="container-fluid">
-  
-</div>
-<div id="section41" class="container-fluid">
-  
-</div>
-<div id="section42" class="container-fluid">
-  
-</div>
+<div id="portfolio" class="container-fluid text-center bg-grey" style="margin-top: 30px">
 
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog.jpg" class="img-rounded" alt="Cinque Terre" width="370" height="300">
+        <a href="#" >Chó Great Pyrenees có đặc điểm tính cách gì đặc biệt</a>
+        
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog2.jpg" class="img-rounded" alt="Cinque Terre" width="435" height="300">
+        <a href="#" >Biện pháp khống chế hành vi hung hãn của chó</a>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog1.jpg" class="img-rounded" alt="Cinque Terre" width="390" height="300">
+        <a href="#" >Stress ở chó,nguyên nhân và cách khắc phục</a>
+      </div>
+    </div>
+	<div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog10.jpg" class="img-rounded" alt="Cinque Terre" width="390" height="300">
+        <a href="#" >Nên cho chó bị viêm khớp ăn gì</a>
+      </div>
+    </div>
+  
+	<div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog3.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+        <a href="#">Sự thật về giống chó BullDog Mỹ</a>
+      </div>
+    </div>
+	  <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog5.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+        <a href="#" >Tìm hiểu về tiêu chuẩn cân nặng của giống chó Samoyed</a>
+      </div>
+    </div>
+  
+	<div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog4.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+        <a href="#" >Hội chứng Cushing ở chó và những điều cần biết</a>
+      </div>
+    </div>
+	  <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog6.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+        <a href="#" >Đôi nét về giống chó Akita Inu thuần chủng</a>
+      </div>
+    </div>
+	  <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog12.jpeg" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+        <a href="#" >Những giống chó nghiệp vụ giỏi nhất</a>
+      </div>
+    </div>
+	 <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog9.png" class="img-rounded" alt="Cinque Terre" width="400" height="300">
+        <a href="#" >Cách khắc phục chứng hôi miệng ở chó</a>
+      </div>
+    </div>
+	 <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/dog8.jpg" class="img-rounded" alt="Cinque Terre" width="437" height="300">
+        <a href="#" >Mụn cóc ở chó và những điều cần biết</a>
+      </div>
+    </div>
+	 
+	<div class="col-sm-4">
+	 <div class="thumbnail">
+        <img src="img/dog11.jpg" class="img-rounded" alt="Cinque Terre" width="414" height="300">
+        <a href="#" >Cẩm nang chăm sóc chó BullDog Anh từ A đến Z</a>
+      </div>
+    </div>
+
+	
+</div>
+  <!--
+	<div class="container-fluid text-center starter-template" style="margin-top:100px">   
+		<a href="#" target="new" style="margin-left:20px"><img src="cat.jpg" class="img-rounded" alt="Cinque Terre"></a>
+		
+		<a href="#" target="new" style="margin-left:20px"><img src="dog2.jpg" class="img-rounded" alt="Cinque Terre"></a>
+	</div>
+	<div class="container-fluid text-center starter-template" style="margin-top:100px">
+		<a href="#" target="new" style="margin-left:20px"><img src="cat1.gif" class="img-rounded" alt="Cinque Terre"></a>
+		<a href="#" target="new" style="margin-left:20px"><img src="cat3.jpg" class="img-rounded" alt="Cinque Terre"></a>
+	</div>
+	<div class="container-fluid text-center starter-template" style="margin-top:50px">
+		<a href="#" target="new" style="margin-left:10px"><img src="cat2.jpg" class="img-rounded" alt="Cinque Terre"></a>
+	
+		<a href="#" target="new" style="margin-left:10px"><img src="dog1.jpg" class="img-rounded" alt="Cinque Terre"></a>
+	</div>
+	<div class="container-fluid text-center starter-template" style="margin-top:50px">
+		<a href="#" target="new" style="margin-left:10px"><img src="dog.jpg" class="img-rounded" alt="Cinque Terre"></a>
+		<a href="#" target="new" style="margin-left:10px"><img src="dog4.jpg" class="img-rounded" alt="Cinque Terre"></a>
+	</div>
+	<div class="container-fluid text-center starter-template" style="margin-top:100px">
+		<a href="#" target="new"><img src="cat4.jpeg" class="img-rounded" alt="Cinque Terre"></a>
+		<a href="#" target="new"><img src="cat7.jpg" class="img-rounded" alt="Cinque Terre"></a>
+	</div>
+	<div class="container-fluid text-center starter-template" style="margin-top:50px">
+		<a href="#" target="new" style="margin-left:10px"><img src="dog5.jpg" class="img-rounded" alt="Cinque Terre"></a>
+		<a href="#" target="new" style="margin-left:10px"><img src="dog6.jpg" class="img-rounded" alt="Cinque Terre"></a>
+	
+		
+	</div>
+	-->
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/top.png" style="width: 50px; height: 53px; margin-top:600px ;margin-left: 1370px" data-spy="affix" data-offset-top="197"></button> 
+<script>
+     // When the user scrolls down 20px from the top of the document, show the button
+     window.onscroll = function() {scrollFunction()};
+     function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+</script>
+<footer class="text-center">
+	<h4>UETCodeCamp</h4>
+      <p>Copyright &copy; 2019 &middot; All Rights Reserved &middot; <a href="https://www.facebook.com/petsne/?__tn__=%2Cd%2CP-R&eid=ARCtNhwcem23O2cI7Z2YEfUwNuEmDUlIhBpuCm_1MBGx-Ew2x4DMxSUIWbZYW3q7MQw4faxkJ6dNylkr" >MyPets</a></p>
+</footer>
+
+</div>
 </body>
 </html>
