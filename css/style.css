@@ -47,6 +47,26 @@
   .dropdown-menu li a:hover {
     background-color: red !important;
   }
+.youtube-link {
+	width: 400px;
+	height: 300px;
+}
+.title-name {
+	font-family: 'Myriad Pro';
+	margin-top: 40px;
+}
+.slide-top {
+	margin-top: 50px;
+	height: 700px;
+	width: 1450px;
+}
+.form-control {
+	width: 250px;
+}
+datalist { 
+  display: none;
+}
+
 footer {
     background-color: #2d2d30;
     color: #f5f5f5;
