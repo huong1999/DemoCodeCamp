@@ -56,12 +56,16 @@
 	margin-top: 40px;
 }
 .slide-top {
-	margin-top: 50px;
+	
 	height: 700px;
-	width: 1450px;
+	width: 1500px;
 }
 .form-control {
 	width: 250px;
+}
+.navbar-left h4 {
+	margin-top: 30px;
+	margin-left: 10px;
 }
 datalist { 
   display: none;

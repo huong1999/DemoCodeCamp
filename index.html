@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="./css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="./lib/jquery.js"></script>
   <style>
   body {
     position: relative; 
@@ -49,14 +50,14 @@
 		<!--Logo-->
 		  <img src="img/LovePets.png" class="nav navbar-nav navbar-left">
 
-		  <h4 class="nav navbar-nav navbar-left" style="margin-top: 30px; margin-left: 10px">MyPets</h4>
+		  <h4 class="nav navbar-nav navbar-left">MyPets</h4>
 		<!--Thanh search-->
 		<ul class="nav navbar-nav navbar-left" >
-		<li class="col-xs-8" style="margin-top: 20px">
-    			<input class="form-control" list="news" name="news" type="text">
+			<li class="col-xs-8" style="margin-top: 20px">
+    			<input id="keyword" class="form-control" list="news" name="news" type="text">
 				
   					<datalist id="news">
-    					<option value="Thông tin cơ bản về mèo Laperm">
+    					<option id="link1" value="Thông tin cơ bản về mèo Laperm">
     					<option value="Biện pháp khống chế hành vi hung hãn của chó">
     					<option value="Nhận biết và cách xử lí khi mèo bị nhiễm trùng hệ tiêu hóa">
     					<option value="Cách nhận biết mèo bị bệnh dại và những điều bạn cần làm">
@@ -69,12 +70,12 @@
 						<option value="Nên cho mèo ăn mấy lần 1 ngày">
 						<option value="Bạn nên làm gì khi mèo lười ăn">
   					</datalist>
-  		</li>
-      	<li class="input-group-btn">
-        	<button type="button" class="btn btn-info" style="margin-top: 20px;margin-left: 10px">
-				<span class="glyphicon glyphicon-search"></span> Search
-    		</button>
-	  	</li>
+  			</li>
+      		<li class="input-group-btn">
+        		<button type="button" id="search" onclick="" class="btn btn-info" style="margin-top: 20px;margin-left: 10px">
+					<span class="glyphicon glyphicon-search"></span> Search
+    			</button>
+	  		</li>
 		</ul>
         <ul class="nav navbar-nav navbar-right">
           	<li><a href="index.html" style="width: 150px; text-align: center"><h4>Trang chủ</h4></a></li>
@@ -529,6 +530,38 @@
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
+		$("#search").on("click",function(e){
+                        jQuery.ajax({
+							//url của file
+                            url: "localhost:8888/posts/create",
+							// loại request
+                            type: "POST",
+							// Xác định việc request có nên được thao tác bất đồng bộ hay không. Giá trị nhận vào và true hoặc false. Mặc định là true.
+                            async: false,
+							//Chỉ ra loại nội dùng mà được dùng để gửi tới server. Mặc định là application/x-www-form-urlencoded
+                            contentType: "application/x-www-form-urlencoded",
+							//dữ liệu được gửi đến server
+                            data: {
+                               {keyword: String}
+                            },
+                        })
+                            
+                        .done(function(data, textStatus, jqXHR) {
+                            if(data.status == "success"){
+                                
+                                window.location.href = "./content/c1.html";
+                            } else {
+                                alert("Wrong input, please try again");
+                            }
+                        })
+                        .fail(function(jqXHR, textStatus, errorThrown) {
+                            console.log("HTTP Request Failed");
+                            alert("HTTP Request Failed");
+                        })
+                        .always(function() {
+                            /* ... */
+                        });
+                    });
 </script>
 		<!-- Footer -->
 <footer class="text-center">
